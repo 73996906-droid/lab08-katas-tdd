@@ -5,5 +5,8 @@ def sumar(cadena: str) -> int:
     if not cadena:
         return 0
 
-    # Si contiene un número, lo convertimos a entero.
-    return int(cadena)
+    # Separamos los números utilizando la coma.
+    numeros = cadena.split(",")
+
+    # Convertimos cada número a entero y los sumamos.
+    return sum(int(n) for n in numeros)
